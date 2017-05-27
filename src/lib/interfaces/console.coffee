@@ -293,6 +293,7 @@ class ConsoleInterface
 				# Note any handles that are still active
 				activeHandles = process._getActiveHandles()
 				if activeHandles?.length
+					process.exit(0)
 					console.log """
 						Waiting on the handles:
 						#{docpadUtil.inspect activeHandles}
